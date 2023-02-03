@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 17:19:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/03 09:15:15 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/03 09:29:55 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ void	ft_print_combn(int n)
 		combination[cursor++] = cursor;
 	while (cursor > 0)
 	{
+		max_digit = 10;
 		cursor = 0;
 		while (cursor < n)
 			ft_putchar('0' + combination[cursor++]);
 		while (cursor--)
 		{
 			digit = combination[cursor];
-			max_digit = 10;
 			if (digit < --max_digit)
 			{
 				while (cursor < n)
