@@ -6,13 +6,13 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 17:19:27 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/02 17:28:30 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/03 11:36:06 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	char	ch;
 
