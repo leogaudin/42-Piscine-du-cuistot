@@ -6,9 +6,11 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 18:19:58 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/03 18:21:41 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:45:39 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	rush(int x, int y)
 {
