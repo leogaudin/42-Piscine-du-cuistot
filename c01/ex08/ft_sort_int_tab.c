@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:36:29 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/04 18:27:24 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/04 18:31:02 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	ft_swap(int *a, int *b)
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int		swap;
 	int		i;
 
 	i = 0;
