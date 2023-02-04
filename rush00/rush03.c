@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 18:19:58 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/04 19:10:25 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/04 19:12:22 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	rush(int x, int y)
 
 	if (x <= 0 || y <= 0)
 		return -1;
-
 	i = 0;
 	j = 0;
 	while (j++ < y)
