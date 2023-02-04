@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:53:27 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/04 10:31:10 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/04 10:34:10 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	rush(int x, int y)
 		{
 			if ((i == 1 && j == 1) || (i == x && j == 1))
 				ft_putchar('o');
-			else if ((i == 1 && j == y || (i == x && j == y))
+			else if ((i == 1 && j == y) || (i == x && j == y))
 				ft_putchar('o');
 			else if (j == 1 || j == y)
 				ft_putchar('-');
