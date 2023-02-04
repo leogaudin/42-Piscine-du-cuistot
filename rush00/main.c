@@ -6,13 +6,13 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 18:20:02 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/03 18:21:22 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/04 10:30:00 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	rush(int x, int y);
 
-int	main(int argc, char const *argv[])
+int	main(void)
 {
 	rush(5, 5);
 	return (0);
