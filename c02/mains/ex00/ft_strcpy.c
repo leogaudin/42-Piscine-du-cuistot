@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 10:55:08 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 13:00:05 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 16:42:43 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
 
 int main(int argc, char const *argv[])
 {
-	char first[] = "Hello";
-	char second[] = "Bonjour";
+	char first[] = "Bonjour";
+	char second[] = "Salut les amis";
 	printf("First string is %s\n", first);
 	printf("Second string is %s\n\n", second);
 	ft_strcpy(first, second);
