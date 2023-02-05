@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:58:30 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 14:31:27 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 18:31:04 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,13 @@ char	*ft_strcapitalize(char *str)
 		{
 			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 			{
-				str[i + 1] -= 32;
-				i++;
+				if (str[i] >= '0' && str[i] <= '9')
+					i++;
+				else
+				{
+					str[i + 1] -= 32;
+					i++;
+				}
 			}
 		}
 		i++;
@@ -55,7 +60,7 @@ char	*ft_strcapitalize(char *str)
 
 int main(int argc, char const *argv[])
 {
-	char string[] = "Salut, cOmment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	char string[] = "asdf-qWeRtY ZXCV 100TIS";
 	printf("ft_strcapitalize returned %s\n", ft_strcapitalize(string));
 	return 0;
 }
