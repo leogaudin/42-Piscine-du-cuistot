@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:55:19 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 13:56:13 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 18:15:55 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,10 @@ int	ft_str_is_printable(char *str)
 		str++;
 	}
 	return (is_printable);
+}
+
+int main(void)
+{
+	ft_str_is_printable("\n");
+	return 0;
 }

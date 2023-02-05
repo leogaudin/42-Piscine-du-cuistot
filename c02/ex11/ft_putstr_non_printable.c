@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_with_non_printable.c                     :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:58:46 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 15:51:50 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 18:18:57 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,10 @@ void	ft_putstr_non_printable(char *str)
 			ft_putchar(str[i]);
 		i++;
 	}
+}
+
+int main(void)
+{
+	ft_putstr_non_printable("\n");
+	return 0;
 }
