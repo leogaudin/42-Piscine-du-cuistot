@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:26:13 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 13:35:06 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 13:36:27 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_str_is_alpha(char *str)
 	is_alpha = 1;
 	while (*str)
 	{
-		if (!((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122)))
+		if (!((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z')))
 			is_alpha = 0;
 		str++;
 	}
@@ -28,6 +28,6 @@ int	ft_str_is_alpha(char *str)
 
 int main(int argc, char const *argv[])
 {
-	printf("is_alpha returned %d\n", ft_str_is_alpha("werewr1"));
+	printf("is_alpha returned %d\n", ft_str_is_alpha("werewr"));
 	return 0;
 }
