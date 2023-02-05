@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:58:46 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 15:50:59 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 15:51:50 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	ft_putchar(char c)
 
 void	get_hex(int char_decimal)
 {
-  if (char_decimal >= 0 && char_decimal < 10)
-        ft_putchar('0' + char_decimal);
-    else
-        ft_putchar('a' + char_decimal - 10);
+	if (char_decimal >= 0 && char_decimal < 10)
+		ft_putchar('0' + char_decimal);
+	else
+		ft_putchar('a' + char_decimal - 10);
 }
 
 void	ft_putstr_non_printable(char *str)
