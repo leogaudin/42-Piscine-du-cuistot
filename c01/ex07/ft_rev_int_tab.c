@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:00:21 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/04 17:28:29 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 10:32:20 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_rev_int_tab(int *tab, int size)
 	}
 	i--;
 	tab -= (size - 1);
-	while (i > 0)
+	while (i >= 0)
 	{
 		*tab++ = array[i];
 		i--;
