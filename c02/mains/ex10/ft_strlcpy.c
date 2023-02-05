@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:52:31 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 14:56:29 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/05 18:34:29 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int				i;
+	unsigned int	i;
 	unsigned int	count;
 
 	i = 0;
