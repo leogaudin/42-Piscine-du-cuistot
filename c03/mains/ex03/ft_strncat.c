@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 18:52:54 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 14:57:42 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:43:01 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dest_size++;
 		i++;
 	}
+	dest[dest_size] = '\0';
 	return (dest);
 }
 
