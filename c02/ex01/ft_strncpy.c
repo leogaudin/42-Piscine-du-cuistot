@@ -6,27 +6,21 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:11:28 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 20:45:48 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/06 15:21:10 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int	i;
+	char	*ptr;
 
-	i = 0;
-	while (src[i] != '\0' && i < n)
+	ptr = dest;
+	while (*src && n--)
 	{
-		dest[i] = src[i];
-		++i;
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	if (i < n && src[i] == '\0')
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = '\0';
-			++i;
-		}
-	}
-	return (dest);
+	*dest = '\0';
+	return (ptr);
 }
