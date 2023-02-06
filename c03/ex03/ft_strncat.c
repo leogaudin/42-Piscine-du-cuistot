@@ -6,12 +6,12 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 18:52:54 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 11:11:32 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/06 11:13:16 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
- {
+{
 	int	i;
 	int	dest_size;
 
