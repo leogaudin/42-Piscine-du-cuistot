@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:11:28 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 15:21:40 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:37:29 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char	*ptr;
+	unsigned int	i;
 
-	ptr = dest;
-	while (*src && n--)
+	i = 0;
+	while (i < n && src[i] != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i] = src[i];
+		i++;
 	}
-	*dest = '\0';
-	return (ptr);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }
 
 
