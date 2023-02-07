@@ -6,11 +6,9 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:49:00 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 19:26:56 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/07 10:29:12 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	is_base_valid(char *base)
 {
@@ -25,10 +23,11 @@ int	is_base_valid(char *base)
 	{
 		if (base[i] == '+' || base[i] == '-')
 			is_valid = 0;
-		while (base[i+j])
+		j = i;
+		while (base[j+1])
 		{
 			if (base[i] == base[j+1])
-				 is_valid = 0;
+				is_valid = 0;
 			j++;
 		}
 		i++;
