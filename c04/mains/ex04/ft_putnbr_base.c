@@ -6,11 +6,17 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:49:00 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/07 10:29:04 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/07 11:24:22 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	is_base_valid(char *base)
 {
@@ -26,9 +32,9 @@ int	is_base_valid(char *base)
 		if (base[i] == '+' || base[i] == '-')
 			is_valid = 0;
 		j = i;
-		while (base[j+1])
+		while (base[j + 1])
 		{
-			if (base[i] == base[j+1])
+			if (base[i] == base[j + 1])
 				is_valid = 0;
 			j++;
 		}
@@ -39,14 +45,42 @@ int	is_base_valid(char *base)
 	return (is_valid);
 }
 
-// void	ft_putnbr_base(int nbr, char *base)
-// {
+void	get_base(int nbr, char *base)
+{
+	int	size;
 
-// }
+	size = 0;
+	while (base[size])
+		size++;
+	if (nbr > size)
+	{
+		get_base(nbr / size, base);
+		get_base(nbr % size, base);
+	}
+	else
+		ft_putchar(base[nbr]);
+}
+
+void	ft_putnbr_base(int nbr, char *base)
+{
+	if (is_base_valid(base) == 0)
+		return ;
+	if (nbr < 0)
+	{
+		ft_putchar('-');
+		nbr *= -1;
+	}
+	get_base(nbr, base);
+}
 
 int main(int argc, char const *argv[])
 {
-	char base[] = "01";
-	printf("is_base_valid returned %d for base \"%s\"", is_base_valid(base), base);
+	char base[] = "0123456789abcdef";
+	int number = -13;
+	printf("Number: \t%d\n", number);
+	printf("Base: \t\t%s\n", base);
+	printf("Is base valid? \t%d\n", is_base_valid(base));
+	printf("Result: \t");
+	ft_putnbr_base(number, base);
 	return 0;
 }
