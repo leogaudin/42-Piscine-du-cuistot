@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:54:17 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/08 10:05:14 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/08 12:45:08 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ void	ft_putnbr(int nb)
 	}
 	if (nb >= 10) {
 		ft_putnbr(nb / 10);
-		nb = nb % 10;
+		ft_putnbr(nb % 10);
 	}
-	if (nb < 10) ft_putchar(nb + 48);
+	else
+		ft_putchar(nb + 48);
 }
 
 int main(int argc, char const *argv[])
