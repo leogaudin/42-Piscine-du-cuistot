@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:00:20 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/08 15:13:43 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/08 15:14:45 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int	ft_atoi(char *str)
 	result = 0;
 	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
 		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
-	{
 		i++;
-	}
 	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
