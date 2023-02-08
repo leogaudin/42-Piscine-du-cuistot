@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:54:17 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 17:55:34 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/08 10:04:59 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,13 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	char	array[MAX];
-	int		digit_count;
-	char	digit;
-	int		i;
-
-	if (nb == 0)
-		ft_putchar('0');
-	if (nb < 0)
-	{
+	if (nb < 0) {
 		ft_putchar('-');
-		nb *= -1;
+		nb = -nb;
 	}
-	digit_count = 0;
-	while (nb)
-	{
-		digit = '0' + (nb % 10);
-		array[digit_count++] = digit;
-		nb /= 10;
+	if (nb >= 10) {
+		ft_putnbr(nb / 10);
+		nb = nb % 10;
 	}
-	i = digit_count - 1;
-	while (i > -1)
-	{
-		ft_putchar(array[i--]);
-	}
-	ft_putchar('\n');
+	if (nb < 10) ft_putchar(nb + 48);
 }
