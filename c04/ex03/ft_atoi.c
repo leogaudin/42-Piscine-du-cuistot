@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:00:20 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 18:44:06 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/08 12:55:58 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,22 @@ int	ft_atoi(char *str)
 {
 	int	returned_number;
 	int	is_negative;
+	int	i;
 
+	i = 0;
 	returned_number = 0;
 	is_negative = 0;
-	while (*str)
+	while (str[i])
 	{
-		if (is_space(str) == 1 || *str == '+')
-			str++;
-		else if (*str == '-')
+		if (is_space(&str[i]) == 1 || str[i] == '+')
+			i++;
+		else if (str[i] == '-')
 		{
 			flip_bool(&is_negative);
-			str++;
+			i++;
 		}
-		else if (*str >= '0' && *str <= '9')
-		{
-			returned_number = (returned_number * 10) + (*str - '0');
-			str++;
-		}
+		else if (str[i] >= '0' && str[i] <= '9')
+			returned_number = (returned_number * 10) + (str[i++] - '0');
 		else
 			break ;
 	}
