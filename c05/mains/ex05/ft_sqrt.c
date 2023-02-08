@@ -6,9 +6,11 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:33:32 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/08 16:28:19 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/08 16:28:32 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_sqrt(int nb)
 {
@@ -28,4 +30,11 @@ int	ft_sqrt(int nb)
 		return (0);
 	else
 		return (converted / 10);
+}
+
+int main(void)
+{
+	int number = 100;
+	printf("The square root of %d is %d", number, ft_sqrt(number));
+	return 0;
 }
