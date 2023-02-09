@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:04:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/09 18:48:42 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/09 18:50:32 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ int	ft_find_next_prime(int nb)
 			return (next);
 		next++;
 	}
+	return (-1);
 }
