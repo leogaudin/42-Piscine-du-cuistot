@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 14:39:18 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/09 18:47:41 by lgaudin          ###   ########.fr       */
+/*   Created: 2023/02/09 15:04:48 by lgaudin           #+#    #+#             */
+/*   Updated: 2023/02/09 18:48:25 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,22 @@ int	ft_is_prime(int nb)
 	return (is_prime);
 }
 
+int	ft_find_next_prime(int nb)
+{
+	int	next;
+
+	next = nb;
+	while (next)
+	{
+		if (ft_is_prime(next))
+			return (next);
+		next++;
+	}
+}
+
 int main(int argc, char const *argv[])
 {
-	int number = 7;
-	printf("Is %d prime? %d\n", number, ft_is_prime(number));
+	int number = 921;
+	printf("Next prime number after %d is %d\n", number, ft_find_next_prime(number));
 	return 0;
 }
