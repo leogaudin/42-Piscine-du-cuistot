@@ -6,26 +6,24 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:33:32 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/08 16:28:19 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/12 15:20:11 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	float	sqrt;
-	float	temp;
-	int		converted;
+	int	sqrt;
 
-	sqrt = nb / 2;
-	temp = 0;
-	while (sqrt != temp)
-	{
-		temp = sqrt;
-		sqrt = (nb / temp + temp) / 2;
-	}
-	converted = sqrt * 10;
-	if (converted % 10 != 0)
+	if (nb <= 0)
 		return (0);
-	else
-		return (converted / 10);
+	if (nb == 1)
+		return (1);
+	sqrt = 0;
+	while (sqrt <= nb / 2 && sqrt < 46342)
+	{
+		if (sqrt * sqrt == nb)
+			return (sqrt);
+		sqrt++;
+	}
+	return (0);
 }
