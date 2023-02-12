@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 17:19:39 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/02 17:54:25 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/12 19:18:27 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ void	ft_print_comb(void)
 				ft_put_3_chars(a, b, c);
 				if (a != '7' || b != '8' || c != '9')
 					ft_put_2_chars(',', ' ');
-				else
-					ft_putchar('\n');
 				c++;
 			}
 			c = ++b + 1;
