@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:58:46 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 20:07:09 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 09:10:50 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,20 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	get_hex(int char_decimal)
+void	get_base(int nbr, char *base)
 {
-	if (char_decimal >= 0 && char_decimal < 10)
-		ft_putchar('0' + char_decimal);
+	int	size;
+
+	size = 0;
+	while (base[size])
+		size++;
+	if (nbr > size)
+	{
+		get_base(nbr / size, base);
+		get_base(nbr % size, base);
+	}
 	else
-		ft_putchar('a' + char_decimal - 10);
+		ft_putchar(base[nbr]);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -32,12 +40,12 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!(str[i] >= 32 && str[i] <= 127))
+		if (!(str[i] >= 32 && str[i] <= 126))
 		{
 			ft_putchar('\\');
 			if (str[i] < 16)
 				ft_putchar('0');
-			get_hex(str[i]);
+			get_base(str[i], "0123456789abcdef");
 		}
 		else
 			ft_putchar(str[i]);
