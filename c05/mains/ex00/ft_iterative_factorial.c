@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:04:33 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/07 17:13:01 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 15:05:37 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_iterative_factorial(int nb)
 	int	result;
 	int	i;
 
-	if (nb <= 0)
+	if (nb < 0 || nb >= 13)
 		return (0);
 	result = 1;
 	i = nb;
