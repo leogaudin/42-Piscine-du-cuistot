@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:16:32 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/06 12:31:39 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 09:17:09 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		dest_size++;
 	while (src[src_size])
 		src_size++;
+	if (size == 0)
+		return (src_size);
+	if (size <= dest_size)
+		return (src_size + size);
 	total_size = src_size + dest_size;
 	i = 0;
 	while (src[i] && dest_size < size - 1)
@@ -31,5 +35,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		dest_size++;
 		i++;
 	}
+	dest[dest_size] = '\0';
 	return (total_size);
 }
