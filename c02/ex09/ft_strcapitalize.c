@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:58:30 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/13 19:00:51 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 19:04:25 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strcapitalize(char *str)
 	i = 1;
 	while (str[i] != '\0')
 	{
-		if (((str[i] >= 'a' && str[i] <= 'z') ||
-					(str[i] >= 'A' && str[i] <= 'Z')) && (str[i - 1] < '0' ||
-					(str[i - 1] > '9' && str[i - 1] < 'A') ||
-					(str[i - 1] > 'Z' && str[i - 1] < 'a') ||
-					str[i - 1] > 'z'))
+		if (((str[i] >= 'a' && str[i] <= 'z')
+				|| (str[i] >= 'A' && str[i] <= 'Z')) && (str[i - 1] < '0'
+				|| (str[i - 1] > '9' && str[i - 1] < 'A')
+				|| (str[i - 1] > 'Z' && str[i - 1] < 'a')
+				|| str[i - 1] > 'z'))
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 				str[i] -= 32;
