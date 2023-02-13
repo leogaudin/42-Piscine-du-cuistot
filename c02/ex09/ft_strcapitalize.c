@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:58:30 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/13 08:54:15 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 08:56:22 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,15 @@ char	*ft_strcapitalize(char *str)
 		character = str[i - 1];
 		if (ft_str_is_lowercase(character) || ft_str_is_uppercase(character)
 			|| ft_str_is_numeric(character))
+		{
 			if (ft_str_is_uppercase(str[i]))
 				str[i] += 32;
+		}
 		else
+		{
 			if (ft_str_is_lowercase(str[i]))
 				str[i] -= 32;
+		}
 		i++;
 	}
 	return (str);
