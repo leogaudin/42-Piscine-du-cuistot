@@ -6,13 +6,13 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 19:05:22 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/09 19:08:16 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 09:44:20 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(int argc, char const *argv[])
+int	main(int argc, char const *argv[])
 {
 	int	length;
 
