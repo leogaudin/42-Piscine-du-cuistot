@@ -6,13 +6,14 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:58:30 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/13 08:52:14 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 08:54:15 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_numeric(char str)
 {
-	return (str >= '0' && str <= '9');}
+	return (str >= '0' && str <= '9');
+}
 
 int	ft_str_is_lowercase(char str)
 {
@@ -36,7 +37,8 @@ char	*ft_strcapitalize(char *str)
 	while (str[i])
 	{
 		character = str[i - 1];
-		if (ft_str_is_lowercase(character) || ft_str_is_uppercase(character) || ft_str_is_numeric(character))
+		if (ft_str_is_lowercase(character) || ft_str_is_uppercase(character)
+			|| ft_str_is_numeric(character))
 			if (ft_str_is_uppercase(str[i]))
 				str[i] += 32;
 		else
