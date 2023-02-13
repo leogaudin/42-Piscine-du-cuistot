@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:52:31 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/05 18:34:29 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/13 08:58:08 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	count = 0;
 	while (src[count])
 		count++;
+	if (count == 0)
+		return (0);
 	while (src[i] && i < (size - 1))
 	{
 		dest[i] = src[i];
