@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:04:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/09 18:50:32 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/14 09:54:24 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,14 @@ int	ft_is_prime(int nb)
 
 	if (nb <= 1)
 		return (0);
-	else
-		is_prime = 1;
 	i = 2;
 	while (i <= nb / 2)
 	{
 		if (nb % i == 0)
-		{
-			is_prime = 0;
-			break ;
-		}
+			return (0);
 		i++;
 	}
-	return (is_prime);
+	return (1);
 }
 
 int	ft_find_next_prime(int nb)
@@ -37,11 +32,13 @@ int	ft_find_next_prime(int nb)
 	int	next;
 
 	next = nb;
+	if (nb < 2)
+		return (2);
 	while (next)
 	{
 		if (ft_is_prime(next))
 			return (next);
 		next++;
 	}
-	return (-1);
+	return (2);
 }
