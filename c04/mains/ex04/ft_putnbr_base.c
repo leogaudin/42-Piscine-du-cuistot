@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:49:00 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/13 09:31:23 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/14 10:31:38 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,12 @@ void	ft_putchar(char c)
 int	is_base_valid(char *base)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
 	while (base[i])
 	{
-		if (base[i] == '+' || base[i] == '-')
+		if (base[i] == '+' || base[i] == '-' || base[i] == base[i + 1])
 			return (0);
-		j = i;
-		while (base[j + 1])
-		{
-			if (base[i] == base[j + 1])
-				return (0);
-			j++;
-		}
 		i++;
 	}
 	if (i <= 1)
@@ -50,13 +41,9 @@ void	get_base(int nbr, char *base)
 	size = 0;
 	while (base[size])
 		size++;
-	if (nbr > size)
-	{
+	if (nbr >= size)
 		get_base(nbr / size, base);
-		get_base(nbr % size, base);
-	}
-	else
-		ft_putchar(base[nbr]);
+	ft_putchar(base[nbr % size]);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
