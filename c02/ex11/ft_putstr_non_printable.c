@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:58:46 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/13 09:10:50 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/14 07:57:42 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!(str[i] >= 32 && str[i] <= 126))
+		if ((str[i] <= 31 && str[i] >= 0) || str[i] == 127)
 		{
 			ft_putchar('\\');
 			if (str[i] < 16)
