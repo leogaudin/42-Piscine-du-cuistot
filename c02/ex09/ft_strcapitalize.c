@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 13:58:30 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/13 19:04:25 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/14 07:41:15 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@ char	*ft_strcapitalize(char *str)
 {
 	unsigned int	i;
 
-	if (str[0] != '\0' && str[0] >= 'a' && str[0] <= 'z')
+	if (str[0] && str[0] >= 'a' && str[0] <= 'z')
 		str[0] -= 32;
 	i = 1;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (((str[i] >= 'a' && str[i] <= 'z')
 				|| (str[i] >= 'A' && str[i] <= 'Z')) && (str[i - 1] < '0'
