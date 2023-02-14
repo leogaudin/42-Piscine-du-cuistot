@@ -6,14 +6,14 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:52:31 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/14 07:50:35 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/14 08:49:44 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned	int	i;
-	unsigned	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	while (dest[i])
