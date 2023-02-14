@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 14:58:46 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/14 07:57:42 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/14 11:02:35 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,9 @@ void	get_base(int nbr, char *base)
 	size = 0;
 	while (base[size])
 		size++;
-	if (nbr > size)
-	{
+	if (nbr >= size)
 		get_base(nbr / size, base);
-		get_base(nbr % size, base);
-	}
-	else
-		ft_putchar(base[nbr]);
+	ft_putchar(base[nbr % size]);
 }
 
 void	ft_putstr_non_printable(char *str)
