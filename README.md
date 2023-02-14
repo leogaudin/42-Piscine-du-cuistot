@@ -3,9 +3,9 @@
 ```
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK | ex09: KO
 ```
-## Shell01 - 70%
+## Shell01 - 100%
 ```
-ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: KO | ex08: OK
+ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK
 ```
 ## C00 - 85%
 ```
