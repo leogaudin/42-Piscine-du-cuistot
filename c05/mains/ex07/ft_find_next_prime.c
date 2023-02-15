@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:04:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/14 09:54:07 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/15 16:24:30 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_is_prime(int nb)
 {
-	int	is_prime;
 	int	i;
 
 	if (nb <= 1)
@@ -47,7 +46,7 @@ int	ft_find_next_prime(int nb)
 
 int main(int argc, char const *argv[])
 {
-	int number = -1000000000;
+	int number = 2147483647;
 	printf("Next prime number after %d is %d\n", number, ft_find_next_prime(number));
 	return 0;
 }

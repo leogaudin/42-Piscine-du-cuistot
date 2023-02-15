@@ -6,13 +6,12 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 15:04:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/14 09:54:24 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/15 16:23:57 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	int	is_prime;
 	int	i;
 
 	if (nb <= 1)
