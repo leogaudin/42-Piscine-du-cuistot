@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:36:43 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/16 13:22:53 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/16 13:28:27 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*dec_to_base(int nbr, char *base)
 {
 	int		size;
 	int		index;
-	int 	remainder;
+	int		remainder;
 	char	*result;
 
 	size = 0;
