@@ -6,13 +6,13 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 11:20:07 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/16 10:49:52 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/16 13:27:24 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 // Execute with:
-// cc */*  main.c -Wall -Werror -Wextra -o tester && ./tester
+// cc */* tester.c -Wall -Werror -Wextra -o tester && ./tester
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,6 +31,7 @@ char	*ft_strdup(char *src);
 int		*ft_range(int min, int max);
 int		ft_ultimate_range(int **range, int min, int max);
 char	*ft_strjoin(int size, char **strs, char *sep);
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
 
 void	check(int condition, char *name)
 {
@@ -70,6 +71,16 @@ int main(void)
 		(strcmp(ft_strjoin(3, strings, sep), "Bonjour ! Beau gosse va ! Miaou miaou") == 0),
 		"ft_strjoin"
 	);
+
+	char *input = "-2147483647";
+	char *base_from = "0123456789";
+	char *base_to = "0123456789abcdef";
+	check(
+		((strcmp(ft_convert_base(input, base_from, base_to), "-7fffffff") == 0)
+		&&
+ 		(strcmp(ft_convert_base("-7fffffff", base_to, base_from), "-2147483647") == 0)),
+		"ft_convert_base"
+		);
 
 	return (0);
 }
