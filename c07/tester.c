@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 11:20:07 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/16 18:59:19 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/17 10:12:04 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,9 @@ int main(void)
 
 	char str[] = ".Salut, j'espère que ça va, moi top. Bonjourno.";
 	char charset[] = ".,";
+	char **result = ft_split(str, charset);
 	check(
-		(strcmp(ft_split(str, charset)[0], "Salut") == 0),
+		(strcmp(result[0], "Salut") == 0),
 		"ft_split"
 	);
 
