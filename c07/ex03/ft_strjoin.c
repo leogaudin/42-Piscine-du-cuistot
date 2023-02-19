@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:10:28 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/15 09:30:55 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/19 10:34:48 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ char	*ft_strcat(char *dest, char *src)
 		dest_size++;
 		i++;
 	}
+	dest[dest_size] = '\0';
 	return (&dest[dest_size]);
 }
 
@@ -86,7 +87,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	if (size == 0)
 		return (malloc(1));
 	while (string_index < size)
-		bytes += ft_strlen(strs[string_index++]);
+		bytes += ft_strlen(strs[string_index++]) + 1;
 	joined_string = malloc(sizeof(char) * bytes + ft_strlen(sep) * (size - 1));
 	string_index = 0;
 	while (string_index < size)
