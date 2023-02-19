@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 10:47:31 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/18 17:05:37 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/19 10:47:45 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*get_single_digits(char *path, char ***dictionary)
 	line = 0;
 	buf_char_index = 0;
 	dict_values_index = 0;
-	while (buffer[buf_char_index] != '\0' && buf_char_index < size)
+	while (buffer[buf_char_index] != '\0')
 	{
 		while (buffer[buf_char_index] != ':')
 		{
