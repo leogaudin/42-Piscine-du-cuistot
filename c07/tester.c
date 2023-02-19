@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 11:20:07 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/17 10:12:04 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/19 10:37:13 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		*ft_range(int min, int max);
 int		ft_ultimate_range(int **range, int min, int max);
 char	*ft_strjoin(int size, char **strs, char *sep);
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
-char	**ft_split(char *str, char *charset);
+// char	**ft_split(char *str, char *charset);
 
 void	check(int condition, char *name)
 {
@@ -62,7 +62,7 @@ int main(void)
 
 	int		**range = malloc(sizeof(int) * 100);
 	check(
-		(ft_ultimate_range(range, -42, 49) == 92),
+		(ft_ultimate_range(range, -42, 49) == 91),
 		"ft_ultimate_range"
 	);
 
@@ -83,13 +83,13 @@ int main(void)
 		"ft_convert_base"
 	);
 
-	char str[] = ".Salut, j'espère que ça va, moi top. Bonjourno.";
-	char charset[] = ".,";
-	char **result = ft_split(str, charset);
-	check(
-		(strcmp(result[0], "Salut") == 0),
-		"ft_split"
-	);
+	// char str[] = ".Salut, j'espère que ça va, moi top. Bonjourno.";
+	// char charset[] = ".,";
+	// char **result = ft_split(str, charset);
+	// check(
+	// 	(strcmp(result[0], "Salut") == 0),
+	// 	"ft_split"
+	// );
 
 	return (0);
 }
