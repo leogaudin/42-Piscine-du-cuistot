@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:10:28 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/19 10:34:48 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/19 15:15:02 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,11 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	string_index = 0;
 	bytes = 0;
 	if (size == 0)
-		return (malloc(1));
+		return (malloc(sizeof(char)));
 	while (string_index < size)
-		bytes += ft_strlen(strs[string_index++]) + 1;
-	joined_string = malloc(sizeof(char) * bytes + ft_strlen(sep) * (size - 1));
+		bytes += ft_strlen(strs[string_index++]);
+	joined_string = malloc(sizeof(char)
+			* (bytes + ft_strlen(sep) * (size - 1) + 1));
 	string_index = 0;
 	while (string_index < size)
 	{
