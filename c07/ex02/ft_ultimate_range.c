@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 18:07:08 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/14 16:28:58 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/19 10:31:06 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	size;
 	int	i;
 
-	size = 0;
-	while (min + size <= max)
-		size++;
+	size = max - min;
 	if (min >= max)
 		return (0);
 	*range = malloc(sizeof(int) * size);
