@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 10:47:31 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/19 10:47:45 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/19 12:16:28 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,95 @@
 // 	return (0);
 // }
 
+char	*ft_strstr(char *str, char *to_find)
+{
+	int	i;
+	int	j;
+
+	if (to_find[0] == '\0')
+		return (str);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		j = 0;
+		while (to_find[j] != '\0')
+		{
+			if (str[i + j] == to_find[j])
+			{
+				j++;
+			}
+			else
+				break ;
+		}
+		if (to_find[j] == '\0')
+		{
+			return (str + i);
+		}
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+// char	*get_single_digits(char *path, char ***dictionary)
+// {
+// 	int		file_desc;
+// 	int		size;
+// 	char	buffer[MAX];
+// 	int		buf_char_index;
+// 	int		dict_values_index;
+// 	int		line;
+
+// 	file_desc = open(path, O_RDONLY);
+// 	if (file_desc == -1)
+// 		return (0);
+// 	size = read(file_desc, buffer, MAX);
+// 	line = 0;
+// 	buf_char_index = 0;
+// 	dict_values_index = 0;
+// 	while (buffer[buf_char_index] != '\0')
+// 	{
+// 		while (buffer[buf_char_index] != ':')
+// 		{
+// 			if (buffer[buf_char_index] >= '0' && buffer[buf_char_index] <= '9')
+// 			{
+// 				dictionary[line][0][dict_values_index] = buffer[buf_char_index];
+// 				dict_values_index++;
+// 			}
+// 			buf_char_index++;
+// 		}
+// 		buf_char_index++;
+// 		dictionary[line][0][dict_values_index] = '\0';
+// 		dict_values_index = 0;
+// 		while (buffer[buf_char_index] == ' ')
+// 			buf_char_index++;
+// 		while (buffer[buf_char_index] != '\n')
+// 		{
+// 			dictionary[line][1][dict_values_index] = buffer[buf_char_index];
+// 			dict_values_index++;
+// 			buf_char_index++;
+// 		}
+// 		dictionary[line][1][dict_values_index] = '\0';
+// 		dict_values_index = 0;
+// 		line++;
+// 		buf_char_index++;
+// 	}
+// 	return (0);
+// }
+
 char	*get_single_digits(char *path, char ***dictionary)
 {
 	int		file_desc;
@@ -51,43 +140,20 @@ char	*get_single_digits(char *path, char ***dictionary)
 	char	buffer[MAX];
 	int		buf_char_index;
 	int		dict_values_index;
-	int		line;
+	int		i;
+	char	*temp_needle;
 
 	file_desc = open(path, O_RDONLY);
 	if (file_desc == -1)
 		return (0);
 	size = read(file_desc, buffer, MAX);
-	line = 0;
-	buf_char_index = 0;
-	dict_values_index = 0;
-	while (buffer[buf_char_index] != '\0')
+	temp_needle = malloc(sizeof(char) * 10);
+	i = 0;
+	while (i < 10)
 	{
-		while (buffer[buf_char_index] != ':')
-		{
-			if (buffer[buf_char_index] >= '0' && buffer[buf_char_index] <= '9')
-			{
-				dictionary[line][0][dict_values_index] = buffer[buf_char_index];
-				dict_values_index++;
-			}
-			buf_char_index++;
-		}
-		buf_char_index++;
-		dictionary[line][0][dict_values_index] = '\0';
-		dict_values_index = 0;
-		while (buffer[buf_char_index] == ' ')
-			buf_char_index++;
-		while (buffer[buf_char_index] != '\n')
-		{
-			dictionary[line][1][dict_values_index] = buffer[buf_char_index];
-			dict_values_index++;
-			buf_char_index++;
-		}
-		dictionary[line][1][dict_values_index] = '\0';
-		dict_values_index = 0;
-		line++;
-		buf_char_index++;
+		strcpy(temp_needle, (char[2]) {i + '0', '\0'} );
+		ft_strstr(buffer, temp_needle)[0];
 	}
-	return (0);
 }
 
 int	main(void)
