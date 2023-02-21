@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 17:19:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/03 09:29:55 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/21 09:20:59 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@ void	ft_put_2_chars(char x, char y)
 	ft_putchar(y);
 }
 
+void	ft_print_current(int *cursor, int n, int *combination)
+{
+	while (*cursor < n)
+	{
+		ft_putchar('0' + combination[(*cursor)]);
+		*cursor += 1;
+	}
+}
+
 void	ft_print_combn(int n)
 {
 	int		combination[10];
@@ -30,15 +39,14 @@ void	ft_print_combn(int n)
 	int		max_digit;
 	int		digit;
 
-	cursor = 0;
-	while (cursor < n)
-		combination[cursor++] = cursor;
+	cursor = -1;
+	while (++cursor < n)
+		combination[cursor] = cursor;
 	while (cursor > 0)
 	{
 		max_digit = 10;
 		cursor = 0;
-		while (cursor < n)
-			ft_putchar('0' + combination[cursor++]);
+		ft_print_current(&cursor, n, combination);
 		while (cursor--)
 		{
 			digit = combination[cursor];
@@ -53,8 +61,8 @@ void	ft_print_combn(int n)
 	}
 }
 
-int	main(int argc, char const *argv[])
+int	main(void)
 {
-	ft_print_combn(2);
+	ft_print_combn(5);
 	return (0);
 }
