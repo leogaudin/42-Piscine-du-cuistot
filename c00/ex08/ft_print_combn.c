@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 17:19:48 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/21 09:20:59 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/21 12:06:04 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,4 @@ void	ft_print_combn(int n)
 			}
 		}
 	}
-}
-
-int	main(void)
-{
-	ft_print_combn(5);
-	return (0);
 }
