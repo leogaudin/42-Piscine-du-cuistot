@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:10:28 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/21 11:14:18 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/22 10:27:12 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,20 @@ char	*ft_strcat(char *dest, char *src)
 	return (&dest[dest_size]);
 }
 
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
 /**
  * @brief
  * We first ensure that we return an empty string if the array of
@@ -91,17 +105,19 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		bytes += ft_strlen(strs[string_index++]);
 	joined_string = malloc(sizeof(char)
 			* (bytes + ft_strlen(sep) * (size - 1) + 1));
-	string_index = 0;
+	string_index = 1;
+	ft_strcpy(joined_string, strs[0]);
 	while (string_index < size)
 	{
-		ft_strcat(joined_string, strs[string_index]);
-		if (string_index < size - 1)
+		if (string_index < size)
 			ft_strcat(joined_string, sep);
+		ft_strcat(joined_string, strs[string_index]);
 		string_index++;
 	}
 	return (joined_string);
 }
 
+/*
 int	main(void)
 {
 	char *strings[] = {"Bonjour", "Beau gosse va", "Miaou miaou"};
@@ -113,3 +129,4 @@ int	main(void)
 	free(combined);
 	printf("Address of combined is %p\n", combined);
 }
+*/
