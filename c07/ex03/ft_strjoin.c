@@ -6,12 +6,13 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:10:28 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/19 15:15:02 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/21 11:14:18 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * @brief
@@ -99,4 +100,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		string_index++;
 	}
 	return (joined_string);
+}
+
+int	main(void)
+{
+	char *strings[] = {"Bonjour", "Beau gosse va", "Miaou miaou"};
+	char *sep = " ! ";
+	int size = 3;
+	char *combined = ft_strjoin(size, strings, sep);
+	printf("Output is %s\n", combined);
+	printf("Address of combined is %p\n", combined);
+	free(combined);
+	printf("Address of combined is %p\n", combined);
 }
