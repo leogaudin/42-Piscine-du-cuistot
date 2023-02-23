@@ -6,7 +6,7 @@
 /*   By: lgaudin <lgaudin@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:09:50 by lgaudin           #+#    #+#             */
-/*   Updated: 2023/02/23 08:58:51 by lgaudin          ###   ########.fr       */
+/*   Updated: 2023/02/23 17:13:56 by lgaudin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,38 +26,31 @@ int	ft_strlen(char *str)
 char	*ft_strdup(char *src)
 {
 	int		length;
-	char	*copy;
+	char	*ptr;
+	int		i;
 
-	length = 0;
-	while (src[length])
-		length++;
-	copy = malloc(sizeof(char) * (length + 1));
-	if (!copy)
-		return (copy);
-	length = 0;
-	while (src[length])
+	length = ft_strlen(src);
+	ptr = malloc(sizeof(char) * (length + 1));
+	i = 0;
+	while (src[i])
 	{
-		copy[length] = src[length];
-		length++;
+		ptr[i] = src[i];
+		i++;
 	}
-	copy[length] = '\0';
-	return (copy);
+	ptr[i] = src[i];
+	return (ptr);
 }
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	int			i;
-	int			temp;
-	t_stock_str	*array;
+	struct s_stock_str	*array;
+	int					i;
 
-	array = malloc((sizeof(t_stock_str) * ac) + sizeof(char));
-	if (!array)
-		return (array);
 	i = 0;
+	array = malloc(sizeof(struct s_stock_str) * (ac + 1));
 	while (i < ac)
 	{
-		temp = ft_strlen(av[i]);
-		array[i].size = temp;
+		array[i].size = ft_strlen(av[i]);
 		array[i].str = av[i];
 		array[i].copy = ft_strdup(av[i]);
 		i++;
